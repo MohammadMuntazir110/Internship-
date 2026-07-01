@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Razorpay - Business Payments & Platform</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="nav" id="nav">
+    <div class="nav-wrap">
+      <div class="nav-logo">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none"><rect width="32" height="32" rx="8" fill="#528FF0"/><text x="16" y="20" font-family="Arial" font-size="16" font-weight="800" text-anchor="middle" fill="white">R</text></svg>
+        <span style="font-weight:700;font-size:1.1rem;color:var(--rp-navy);">Razorpay</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#home">Agentic Stack</a></li>
+        <li><a href="#home">Payments</a></li>
+        <li><a href="#home">Banking+</a></li>
+        <li><a href="#home">Payroll</a></li>
+        <li><a href="#home">Resources</a></li>
+      </ul>
+      <div class="nav-actions">
+        <button class="btn-login">Login</button>
+        <button class="btn-signup-nav">Sign Up</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO CAROUSEL -->
+  <section class="hero" id="hero">
+    <div class="hero-carousel">
+      <div class="hero-slide active">
+        <div class="hero-slide-wrap">
+          <div class="hs-text">
+            <span class="hs-tag">🌍 INTERNATIONAL</span>
+            <h1>Sell in India.<br>Settle <span>Globally</span>.</h1>
+            <p>Reach millions of buyers via UPI, Cards & more. Accept payments from 180+ countries.</p>
+            <div class="hs-btns">
+              <button class="btn-hero-blue">Get Started</button>
+              <button class="btn-hero-outline">Know More</button>
+            </div>
+            <div class="payment-demo">
+              <div class="demo-label">💳 TRY DEMO PAYMENT</div>
+              <div class="demo-amount">₹455</div>
+              <div class="demo-methods">
+                <button class="demo-method active" onclick="selectPaymentMethod(this)">🔐 UPI</button>
+                <button class="demo-method" onclick="selectPaymentMethod(this)">💳 Card</button>
+                <button class="demo-method" onclick="selectPaymentMethod(this)">🏦 Netbanking</button>
+              </div>
+            </div>
+          </div>
+          <div class="hs-image">
+            <img src="https://via.placeholder.com/500x400/EEF5FF/528FF0?text=International+Payments" alt="International Payments">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide-wrap">
+          <div class="hs-text">
+            <span class="hs-tag">💳 PAYMENTS</span>
+            <h1>Accept payments<br>your way.</h1>
+            <p>Online, offline, through apps or websites. One simple integration for everything.</p>
+            <div class="hs-btns">
+              <button class="btn-hero-blue">Explore</button>
+              <button class="btn-hero-outline">Learn More</button>
+            </div>
+          </div>
+          <div class="hs-image">
+            <img src="https://via.placeholder.com/500x400/EEF5FF/528FF0?text=Payment+Solutions" alt="Payments">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide-wrap">
+          <div class="hs-text">
+            <span class="hs-tag">💰 PAYROLL</span>
+            <h1>Automated<br><span>Payroll</span> for India</h1>
+            <p>Automated salary processing & compliances. Save 500+ hours/month.</p>
+            <div class="hs-btns">
+              <button class="btn-hero-blue">Sign Up Now</button>
+              <button class="btn-hero-outline">Know More</button>
+            </div>
+          </div>
+          <div class="hs-image">
+            <img src="https://via.placeholder.com/500x400/EEF5FF/528FF0?text=Payroll+Solution" alt="Payroll">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide-wrap">
+          <div class="hs-text">
+            <span class="hs-tag">🏦 BANKING</span>
+            <h1>Business Banking<br>Simplified.</h1>
+            <p>Current accounts, corporate cards, and loans. All in one platform.</p>
+            <div class="hs-btns">
+              <button class="btn-hero-blue">Open Account</button>
+              <button class="btn-hero-outline">Learn More</button>
+            </div>
+          </div>
+          <div class="hs-image">
+            <img src="https://via.placeholder.com/500x400/EEF5FF/528FF0?text=Business+Banking" alt="Banking">
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-slide">
+        <div class="hero-slide-wrap">
+          <div class="hs-text">
+            <span class="hs-tag">🛍️ POS</span>
+            <h1>Accept in-store<br>payments easily.</h1>
+            <p>Razorpay POS for seamless retail payments. Accept cards, UPI & more.</p>
+            <div class="hs-btns">
+              <button class="btn-hero-blue">Get POS Terminal</button>
+              <button class="btn-hero-outline">Know More</button>
+            </div>
+          </div>
+          <div class="hs-image">
+            <img src="https://via.placeholder.com/500x400/EEF5FF/528FF0?text=POS+Solution" alt="POS">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-company">
+      <div class="hero-company-label">Trusted by leading companies</div>
+      <div class="hero-company-logo">Mamaearth • Meesho • Purplle • MyGate • WOW! Momo</div>
+    </div>
+
+    <div class="hero-nav-row">
+      <div class="hero-dots">
+        <button class="hdot active" onclick="goHero(0)"></button>
+        <button class="hdot" onclick="goHero(1)"></button>
+        <button class="hdot" onclick="goHero(2)"></button>
+        <button class="hdot" onclick="goHero(3)"></button>
+        <button class="hdot" onclick="goHero(4)"></button>
+      </div>
+      <button class="hero-arr" id="hPrev">❮</button>
+      <button class="hero-arr" id="hNext">❯</button>
+    </div>
+  </section>
+
+  <!-- MARQUEE -->
+  <div class="marquee-wrap">
+    <div class="marquee-lbl">Trusted by India's best companies</div>
+    <div class="marquee-track">
+      <div class="mlabel">Zomato</div>
+      <div class="mlabel">CRED</div>
+      <div class="mlabel">Mamaearth</div>
+      <div class="mlabel">Meesho</div>
+      <div class="mlabel">BookMyShow</div>
+      <div class="mlabel">Urban Company</div>
+      <div class="mlabel">Groww</div>
+      <div class="mlabel">Zepto</div>
+      <div class="mlabel">Zomato</div>
+      <div class="mlabel">CRED</div>
+      <div class="mlabel">Mamaearth</div>
+      <div class="mlabel">Meesho</div>
+    </div>
+  </div>
+
+  <!-- SPRINT BANNER -->
+  <div class="sprint-banner">
+    <div class="sprint-content">
+      <div class="sprint-item">
+        <div class="sprint-tag">SPRINT/26</div>
+        <div class="sprint-title">100+ Launches</div>
+        <div class="sprint-sub">One Blueprint</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-tag">FEATURE</div>
+        <div class="sprint-title">Agentic Payments</div>
+        <div class="sprint-sub">AI-native flows</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-tag">FEATURE</div>
+        <div class="sprint-title">Turbo UPI</div>
+        <div class="sprint-sub">5X faster</div>
+      </div>
+      <div class="sprint-item">
+        <div class="sprint-tag">FEATURE</div>
+        <div class="sprint-title">Magic Checkout</div>
+        <div class="sprint-sub">+40% conversions</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT FINDER -->
+  <section class="product-finder">
+    <div class="finder-wrap">
+      <h2 class="finder-title">Looking for a product?</h2>
+      <div class="finder-search">
+        <input type="text" placeholder="Search what you need..." onkeyup="filterProducts(this.value)">
+      </div>
+      <div class="finder-btns">
+        <button class="finder-btn">Accept Payments</button>
+        <button class="finder-btn">Make Payouts</button>
+        <button class="finder-btn">Business Banking</button>
+        <button class="finder-btn">Get Credit</button>
+        <button class="finder-btn">Automate Payroll</button>
+        <button class="finder-btn">Get Recommendations</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINANCE PLATFORM SECTION -->
+  <section class="section">
+    <div class="section-wrap">
+      <p class="sec-eyebrow">ALL IN ONE PLACE</p>
+      <h2 class="sec-h2">Accept Payments</h2>
+      
+      <div class="fp-nav-row">
+        <button class="fp-tab active" onclick="switchFP('ai', this)">Build AI Native</button>
+        <button class="fp-tab" onclick="switchFP('pay', this)">Accept Payments</button>
+        <button class="fp-tab" onclick="switchFP('payout', this)">Make Payouts</button>
+        <button class="fp-tab" onclick="switchFP('banking', this)">Business Banking</button>
+        <button class="fp-tab" onclick="switchFP('payroll', this)">Automate Payroll</button>
+        <button class="fp-tab" onclick="switchFP('credit', this)">Get Credit</button>
+      </div>
+
+      <div class="fp-panels">
+        <!-- AI Native Panel -->
+        <div class="fp-panel active" id="fp-ai">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/4F46E5/FFFFFF?text=Agentic+Payments" alt="Agentic Payments">
+              <div class="fp-card-body">
+                <h4>Agentic Payments</h4>
+                <p>Turn every chat into checkout with AI flows</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/7C3AED/FFFFFF?text=Agent+Studio" alt="Agent Studio">
+              <div class="fp-card-body">
+                <h4>Agent Studio</h4>
+                <p>Delegate work to agents that automate 24/7</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/06B6D4/FFFFFF?text=Payments+for+AI" alt="Payments for AI">
+              <div class="fp-card-body">
+                <h4>Payments for AI</h4>
+                <p>One-click payments for n8n, Replit, Vercel</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/10B981/FFFFFF?text=Agentic+Banking" alt="Agentic Banking">
+              <div class="fp-card-body">
+                <h4>Agentic Banking</h4>
+                <p>Finance expertise in your operations</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payments Panel -->
+        <div class="fp-panel" id="fp-pay">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Payment+Gateway" alt="Gateway">
+              <div class="fp-card-body">
+                <h4>Payment Gateway</h4>
+                <p>Seamless payments on website or app</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/EC4899/FFFFFF?text=Payment+Links" alt="Links">
+              <div class="fp-card-body">
+                <h4>Payment Links</h4>
+                <p>Share links via email or social media</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=Payment+Pages" alt="Pages">
+              <div class="fp-card-body">
+                <h4>Payment Pages</h4>
+                <p>Branded store without coding</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/14B8A6/FFFFFF?text=Razorpay+POS" alt="POS">
+              <div class="fp-card-body">
+                <h4>Razorpay POS</h4>
+                <p>Accept in-store payments easily</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payouts Panel -->
+        <div class="fp-panel" id="fp-payout">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/D946EF/FFFFFF?text=Bulk+Payouts" alt="Payouts">
+              <div class="fp-card-body">
+                <h4>Bulk Payouts</h4>
+                <p>Send money to thousands instantly</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/0891B2/FFFFFF?text=International+Payouts" alt="International">
+              <div class="fp-card-body">
+                <h4>International Payouts</h4>
+                <p>Send across 100+ countries</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/EA580C/FFFFFF?text=Payouts+Pro" alt="Pro">
+              <div class="fp-card-body">
+                <h4>Payouts Pro</h4>
+                <p>99.9% success with multi-bank routing</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/7730A5/FFFFFF?text=Smart+Routing" alt="Routing">
+              <div class="fp-card-body">
+                <h4>Smart Routing</h4>
+                <p>Settlement across networks</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Banking Panel -->
+        <div class="fp-panel" id="fp-banking">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/059669/FFFFFF?text=Current+Account" alt="Account">
+              <div class="fp-card-body">
+                <h4>Current Account</h4>
+                <p>Digital account for businesses</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/CA8A04/FFFFFF?text=Corporate+Cards" alt="Cards">
+              <div class="fp-card-body">
+                <h4>Corporate Cards</h4>
+                <p>Expense management made easy</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/DC2626/FFFFFF?text=Business+Loans" alt="Loans">
+              <div class="fp-card-body">
+                <h4>Business Loans</h4>
+                <p>Quick access to credit</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/2563EB/FFFFFF?text=Banking+Controls" alt="Controls">
+              <div class="fp-card-body">
+                <h4>Banking Controls</h4>
+                <p>Full visibility over finances</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Payroll Panel -->
+        <div class="fp-panel" id="fp-payroll">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/7B61FF/FFFFFF?text=Full+Stack+Payroll" alt="Payroll">
+              <div class="fp-card-body">
+                <h4>Full-Stack Payroll</h4>
+                <p>Salary processing & compliance</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/06B6D4/FFFFFF?text=Compliance" alt="Compliance">
+              <div class="fp-card-body">
+                <h4>Compliance</h4>
+                <p>Auto filing for PF, ESI, IT, GST</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/EC4899/FFFFFF?text=Expense+Management" alt="Expenses">
+              <div class="fp-card-body">
+                <h4>Expense Management</h4>
+                <p>Track employee expenses</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/F59E0B/FFFFFF?text=Analytics+Dashboard" alt="Analytics">
+              <div class="fp-card-body">
+                <h4>Analytics Dashboard</h4>
+                <p>Real-time payroll insights</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Credit Panel -->
+        <div class="fp-panel" id="fp-credit">
+          <div class="fp-cards">
+            <div class="fp-card rd1">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/10B981/FFFFFF?text=Line+of+Credit" alt="Credit">
+              <div class="fp-card-body">
+                <h4>Line of Credit</h4>
+                <p>₹50L collateral-free credit</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd2">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/8B5CF6/FFFFFF?text=Merchant+Loans" alt="Loans">
+              <div class="fp-card-body">
+                <h4>Merchant Loans</h4>
+                <p>Instant loans for merchants</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd3">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/DC2626/FFFFFF?text=Business+Credit+Card" alt="Card">
+              <div class="fp-card-body">
+                <h4>Business Credit Card</h4>
+                <p>Card designed for businesses</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+            <div class="fp-card rd4">
+              <img class="fp-card-img" src="https://via.placeholder.com/300x200/0891B2/FFFFFF?text=Growth+Loans" alt="Growth">
+              <div class="fp-card-body">
+                <h4>Growth Loans</h4>
+                <p>Loans tailored for growth</p>
+                <button class="btn-card-signup">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS -->
+  <section class="testis">
+    <div class="section-wrap">
+      <div class="testis-head">
+        <p class="sec-eyebrow reveal rd1">SUCCESS STORIES</p>
+        <h2 class="reveal rd2">Razorpay grows with you!</h2>
+        <p class="sec-sub reveal rd3">1,50,000+ Businesses Trust Us</p>
+      </div>
+      <div class="testi-track-wrap">
+        <div class="testi-track">
+          <div class="testi-card reveal rd1">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/4F46E5/FFFFFF?text=N" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Nischay Pandey</h5>
+                <span>Founder, Jar</span>
+              </div>
+            </div>
+            <q>"Razorpay helped us reach international customers seamlessly. Amazing platform!"</q>
+          </div>
+          <div class="testi-card reveal rd2">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/7C3AED/FFFFFF?text=A" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Aditya Shankar</h5>
+                <span>Founder, Doubtnut</span>
+              </div>
+            </div>
+            <q>"Payments infrastructure that scales with us. Highly recommended!"</q>
+          </div>
+          <div class="testi-card reveal rd3">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/06B6D4/FFFFFF?text=N" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Neha Sharma</h5>
+                <span>Founder, Isadora</span>
+              </div>
+            </div>
+            <q>"Best payment platform for startups. Support is incredible!"</q>
+          </div>
+          <div class="testi-card reveal rd4">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/10B981/FFFFFF?text=D" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Durlabh Jain</h5>
+                <span>Founder, Barosi</span>
+              </div>
+            </div>
+            <q>"Razorpay's suite of products is exactly what we needed to grow!"</q>
+          </div>
+          <div class="testi-card reveal rd1">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/F59E0B/FFFFFF?text=N" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Nikita Verma</h5>
+                <span>Founder, AN Fashions</span>
+              </div>
+            </div>
+            <q>"Game-changer for our e-commerce business. Highly efficient!"</q>
+          </div>
+          <div class="testi-card reveal rd2">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/EC4899/FFFFFF?text=A" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Anusree Singh</h5>
+                <span>Founder, Spark Studio</span>
+              </div>
+            </div>
+            <q>"We tried many platforms. Razorpay is the best. Period!"</q>
+          </div>
+          <!-- Duplicate first card for seamless scroll -->
+          <div class="testi-card reveal rd1">
+            <div class="tauthor">
+              <img src="https://via.placeholder.com/60x60/4F46E5/FFFFFF?text=N" alt="Avatar">
+              <div class="tauthor-info">
+                <h5>Nischay Pandey</h5>
+                <span>Founder, Jar</span>
+              </div>
+            </div>
+            <q>"Razorpay helped us reach international customers seamlessly. Amazing platform!"</q>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECURITY -->
+  <section class="security">
+    <div class="section-wrap">
+      <p class="sec-eyebrow reveal rd1">ENTERPRISE GRADE</p>
+      <h2 class="sec-h2 reveal rd2">Security & Compliance</h2>
+      <div class="security-cards">
+        <div class="sec-card reveal rd1">
+          <div class="sec-card-icon">🔒</div>
+          <h4>PCI DSS</h4>
+          <p>Level 1 certified for payment security</p>
+        </div>
+        <div class="sec-card reveal rd2">
+          <div class="sec-card-icon">🛡️</div>
+          <h4>SSL Encrypted</h4>
+          <p>256-bit encryption for all transactions</p>
+        </div>
+        <div class="sec-card reveal rd3">
+          <div class="sec-card-icon">🏛️</div>
+          <h4>RBI Approved</h4>
+          <p>Regulated payment service provider</p>
+        </div>
+        <div class="sec-card reveal rd4">
+          <div class="sec-card-icon">✅</div>
+          <h4>ISO 27001</h4>
+          <p>Information security management certified</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GETTING STARTED -->
+  <section class="getting-started">
+    <div class="section-wrap">
+      <p class="sec-eyebrow reveal rd1">SIMPLE ONBOARDING</p>
+      <h2 class="sec-h2 reveal rd2">Getting Started</h2>
+      <div class="gs-cards">
+        <div class="gs-card reveal rd1" data-num="1">
+          <h3>Create Account</h3>
+          <p>Sign up in minutes with your email and business details.</p>
+        </div>
+        <div class="gs-card reveal rd2" data-num="2">
+          <h3>Integrate Payments</h3>
+          <p>Use our simple API or plugins to accept payments instantly.</p>
+        </div>
+        <div class="gs-card reveal rd3" data-num="3">
+          <h3>Go Live</h3>
+          <p>Start accepting payments within hours. No waiting!</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="faq-wrap">
+      <p class="sec-eyebrow reveal rd1">QUESTIONS?</p>
+      <h2 class="sec-h2 reveal rd2">Frequently Asked Questions</h2>
+      <div class="faq-cards">
+        <details class="reveal rd1">
+          <summary>How do I get started with Razorpay? <span>▼</span></summary>
+          <p>Simply sign up on our website, verify your business details, and integrate our API. You can start accepting payments in hours!</p>
+        </details>
+        <details class="reveal rd2">
+          <summary>What payment methods are supported? <span>▼</span></summary>
+          <p>We support UPI, Credit/Debit Cards, Netbanking, Wallets, and international payment methods across 100+ countries.</p>
+        </details>
+        <details class="reveal rd3">
+          <summary>Is my data secure with Razorpay? <span>▼</span></summary>
+          <p>Yes! We are PCI DSS Level 1 certified, use 256-bit SSL encryption, and comply with all international security standards.</p>
+        </details>
+        <details class="reveal rd4">
+          <summary>What are the transaction fees? <span>▼</span></summary>
+          <p>Competitive pricing starts from 1.99% for UPI and 2% for credit cards. Custom pricing available for high-volume merchants.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section class="stats-band">
+    <div class="stats-wrap">
+      <div class="stats-grid">
+        <div class="stat-item reveal rd1">
+          <div class="stat-num" id="stat1">₹0</div>
+          <div class="stat-label">Payments Processed</div>
+        </div>
+        <div class="stat-item reveal rd2">
+          <div class="stat-num" id="stat2">99.99%</div>
+          <div class="stat-label">Uptime Guarantee</div>
+        </div>
+        <div class="stat-item reveal rd3">
+          <div class="stat-num" id="stat3">2 Sec</div>
+          <div class="stat-label">Average Settlement</div>
+        </div>
+        <div class="stat-item reveal rd4">
+          <div class="stat-num">24/7</div>
+          <div class="stat-label">Customer Support</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="foot-wrap">
+      <div class="foot-top">
+        <div class="foot-col">
+          <h5>Razorpay</h5>
+          <ul>
+            <li><a href="#home">About Us</a></li>
+            <li><a href="#home">Blog</a></li>
+            <li><a href="#home">Careers</a></li>
+            <li><a href="#home">Contact</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Products</h5>
+          <ul>
+            <li><a href="#home">Payments</a></li>
+            <li><a href="#home">Payouts</a></li>
+            <li><a href="#home">Banking</a></li>
+            <li><a href="#home">Payroll</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Company</h5>
+          <ul>
+            <li><a href="#home">Pricing</a></li>
+            <li><a href="#home">Security</a></li>
+            <li><a href="#home">Compliance</a></li>
+            <li><a href="#home">Status</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Developers</h5>
+          <ul>
+            <li><a href="#home">Documentation</a></li>
+            <li><a href="#home">API Reference</a></li>
+            <li><a href="#home">SDKs</a></li>
+            <li><a href="#home">Support</a></li>
+          </ul>
+        </div>
+        <div class="foot-col">
+          <h5>Legal</h5>
+          <ul>
+            <li><a href="#home">Terms</a></li>
+            <li><a href="#home">Privacy</a></li>
+            <li><a href="#home">Cookies</a></li>
+            <li><a href="#home">Licenses</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="foot-bottom">
+        <p>&copy; 2026 Razorpay. All rights reserved.</p>
+        <p>Made with ❤️ in India</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
